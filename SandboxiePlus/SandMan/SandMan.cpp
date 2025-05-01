@@ -1232,6 +1232,7 @@ void CSandMan::CreateView(int iViewMode)
 
 void CSandMan::CheckForUpdates(bool bManual)
 {
+	return;
 	m_pUpdater->CheckForUpdates(bManual);
 }
 
@@ -4042,9 +4043,7 @@ void CSandMan::OpenUrl(QUrl url)
 	}
 
 	if (scheme == "sbie") {
-		if (path == "/check")
-			m_pUpdater->CheckForUpdates(true);
-		else if (path == "/installer")
+		if (path == "/installer")
 			m_pUpdater->RunInstaller(false);
 		else if (path == "/apply")
 			m_pUpdater->ApplyUpdate(COnlineUpdater::eFull, false);

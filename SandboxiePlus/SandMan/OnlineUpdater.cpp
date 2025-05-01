@@ -521,6 +521,7 @@ void COnlineUpdater::Process()
 
 void COnlineUpdater::CheckForUpdates(bool bManual)
 {
+	return;
 	if (m_CheckMode == eManual || m_CheckMode == eAuto)
 		return; // already in progress
 

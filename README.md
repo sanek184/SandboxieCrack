@@ -1,5 +1,7 @@
 # Sandboxie Plus / Classic
 
+<a href="./ToBuildYourOwnPlusVersion">构建你自己的Plus版本</a>
+
 <p align='center'>
 EN | <a href='./README_zh_CN.md'>中文</a>
 </p>

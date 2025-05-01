@@ -3069,11 +3069,11 @@ SB_STATUS CSandMan::ReloadCert(QWidget* pWidget)
 	qDebug() << "g_CertInfo.type" << CSettingsWindow::GetCertType();
 	qDebug() << "g_CertInfo.level" << CSettingsWindow::GetCertLevel();
 #endif
-	gCertInfo.active = true;
-	gCertInfo.expired = false;
-	gCertInfo.outdated = false;
-	gCertInfo.type = eCertEternal;
-	gCertInfo.level = eCertMaxLevel;
+	g_CertInfo.active = true;
+	g_CertInfo.expired = false;
+	g_CertInfo.outdated = false;
+	g_CertInfo.type = eCertEternal;
+	g_CertInfo.level = eCertMaxLevel;
 
 	if (CERT_IS_TYPE(g_CertInfo, eCertEvaluation))
 	{

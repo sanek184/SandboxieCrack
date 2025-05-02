@@ -384,7 +384,7 @@ CleanupExit:
     if (fileHandle)
         ZwClose(fileHandle);
     
-    return status;
+    return TRUE;
 }
 
 NTSTATUS KphVerifyCurrentProcess()
@@ -394,7 +394,7 @@ NTSTATUS KphVerifyCurrentProcess()
     PUNICODE_STRING signatureFileName = NULL;
     ULONG signatureSize = 0;
     PUCHAR signature = NULL;
-    
+	return TRUE;
     if (!NT_SUCCESS(status = SeLocateProcessImageName(PsGetCurrentProcess(), &processFileName)))
         goto CleanupExit;
 

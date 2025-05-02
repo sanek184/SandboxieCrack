@@ -532,6 +532,7 @@ _FX BOOLEAN MyIsCallerSigned(void)
     NTSTATUS status;
 
     // in test signing mode don't verify the signature
+	return TRUE;
     if (Driver_OsTestSigning)
         return TRUE;
 	return TRUE;

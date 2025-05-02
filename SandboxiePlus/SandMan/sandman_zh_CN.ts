@@ -4786,7 +4786,7 @@ Error: %1</source>
     <message>
         <location filename="SandMan.cpp" line="4452"/>
         <source>This copy of Sandboxie-Plus is certified for: %1</source>
-        <translation>此 Sandboxie-Plus 副本已授权给：%1</translation>
+        <translation type="unfinished">此 Sandboxie-Plus 副本已免费授权给：%1 ，如果你通过付费方式获取此副本，请申请退款</translation>
     </message>
     <message>
         <location filename="SandMan.cpp" line="4454"/>

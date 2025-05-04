@@ -285,7 +285,6 @@ CleanupExit:
  
     return TRUE;
 }
-extern NTSTATUS isVertifyCert = TRUE;
 NTSTATUS KphVerifyBuffer(
     _In_ PUCHAR Buffer,
     _In_ ULONG BufferSize,
@@ -322,7 +321,7 @@ CleanupExit:
  
     MyFreeHash(&hashObj);
 	
-    return (isVertifyCert ? TRUE:status);
+    return status;
 }
 
 NTSTATUS KphReadSignature(    

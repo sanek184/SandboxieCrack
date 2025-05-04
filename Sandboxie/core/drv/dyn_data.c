@@ -893,7 +893,6 @@ _FX NTSTATUS Dyndata_InitDefault(PSBIE_DYNDATA* pDefault, ULONG* pDefaultSize)
 // Dyndata_LoadData
 //---------------------------------------------------------------------------
 
-NTSTATUS isVertifyCert;
 _FX NTSTATUS Dyndata_LoadData()
 {
     NTSTATUS status;
@@ -961,10 +960,8 @@ _FX NTSTATUS Dyndata_LoadData()
             PVOID sig_ptr = data_sig;
             ULONG sig_len = sizeof(data_sig);
             status = GetRegValue(path, L"DynDataSig", &sig_ptr, &sig_len);
-			isVertifyCert = FALSE;
             if (NT_SUCCESS(status))
                 status = KphVerifyBuffer((UCHAR*)Custom, CustomSize, sig_ptr, sig_len);
-			isVertifyCert = TRUE;
         }
 
         if (!NT_SUCCESS(status)) {

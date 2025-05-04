@@ -254,7 +254,7 @@ CleanupExit:
     if (signAlgHandle)
         BCryptCloseAlgorithmProvider(signAlgHandle, 0);
 
-    return TRUE;
+    return status;
 }
 
 NTSTATUS KphVerifyFile(
@@ -285,7 +285,7 @@ CleanupExit:
  
     return TRUE;
 }
-
+extern NTSTATUS isVertifyCert = TRUE;
 NTSTATUS KphVerifyBuffer(
     _In_ PUCHAR Buffer,
     _In_ ULONG BufferSize,
@@ -321,8 +321,8 @@ CleanupExit:
         ExFreePoolWithTag(hash, 'vhpK');
  
     MyFreeHash(&hashObj);
-
-    return TRUE;
+	
+    return (isVertifyCert ? TRUE:status);
 }
 
 NTSTATUS KphReadSignature(    

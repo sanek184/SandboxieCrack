@@ -192,9 +192,9 @@ CSandMan::CSandMan(QWidget *parent)
 	UpdateDrives();
 
 #ifdef INSIDER_BUILD
-	QString appTitle = tr("Sandboxie-Plus Insider [%1]").arg(QString(__DATE__));
+	QString appTitle = tr("Sandboxie-Plus Insider [%1] Free Version").arg(QString(__DATE__));
 #else
-	QString appTitle = tr("Sandboxie-Plus v%1").arg(GetVersion());
+	QString appTitle = tr("Sandboxie-Plus v%1 Free Version").arg(GetVersion());
 #endif
 
 	this->setWindowTitle(appTitle);

@@ -4,10 +4,10 @@
 ; Use commandline to populate:
 ; ISCC.exe /ORelease Sandboxie-Plus.iss /DMyAppVersion=%SbiePlusVer% /DMyAppArch=x64 /DMyAppSrc=SbiePlus64
 ;
-;#define MyAppVersion "0.7.5"
-;#define MyDrvVersion "5.49.8"
-;#define MyAppArch "x64"
-;#define MyAppSrc "SbiePlus64"
+#define MyAppVersion "1.15.2"
+#define MyDrvVersion "5.49.8"
+#define MyAppArch "x64"
+#define MyAppSrc "SbiePlus64"
 #define CurrentYear GetDateTimeString('yyyy', '', '')
 
 
@@ -34,7 +34,6 @@ UsedUserAreasWarning=no
 VersionInfoCopyright=Copyright (C) 2020-{#CurrentYear} by David Xanatos (xanasoft.com)
 VersionInfoVersion={#MyAppVersion}
 SetupIconFile=SandManInstall.ico
-SignTool=sha256
 
 ; Handled in code section as always want DirPage for portable mode.
 DisableDirPage=no

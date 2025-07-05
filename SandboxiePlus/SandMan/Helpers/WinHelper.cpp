@@ -14,6 +14,9 @@
 #include <Shlwapi.h>
 #include <Shlobj.h>
 
+#pragma comment(lib, "Iphlpapi.lib")
+#pragma comment(lib, "Ws2_32.lib")
+
 
 QVariantMap ResolveShortcut(const QString& LinkPath)
 {
